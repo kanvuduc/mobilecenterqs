@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ContentPage 
+	xmlns="http://xamarin.com/schemas/2014/forms" 
+	xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" 
+	xmlns:local="clr-namespace:MobileCenterQs" 
+	x:Class="MobileCenterQs.MobileCenterQsPage"
+    NavigationPage.HasNavigationBar="false"
+	BackgroundColor="#e5e5e5"
+	Padding="24"
+	>
+    <Frame 
+		VerticalOptions="CenterAndExpand" 
+		Padding="24,16" 
+		OutlineColor="White" 
+		BackgroundColor="White">
+        <StackLayout Spacing="0">
+            <Label 
+			    Text="Mobile Center QuickStart"
+			    FontSize="32" TextColor="Green" 
+			    HorizontalTextAlignment="Center" />
+            <BoxView HeightRequest="48" />
+            <Entry 
+			    x:Name="txtUserName" 
+				AutomationId="txtUserName"
+			    Placeholder="User name" 
+			    FontSize="16" 
+			    TextColor="Green" >
+                <View.HeightRequest>
+                    <OnPlatform x:TypeArguments="x:Double" Android="48" iOS="40 "/>
+                </View.HeightRequest>
+            </Entry>
+            <BoxView HeightRequest="16" />
+            <Entry 
+			    x:Name="txtPassword" 
+                AutomationId="txtPassword"
+			    Placeholder="Password" 
+			    FontSize="16" 
+			    TextColor="Green"
+                IsPassword="true">
+                <View.HeightRequest>
+                    <OnPlatform x:TypeArguments="x:Double" Android="48" iOS="40 "/>
+                </View.HeightRequest>
+            </Entry>
+            <BoxView HeightRequest="32" />
+            <Button 
+			    x:Name="btnLogin" 
+                AutomationId="btnLogin"
+			    Text="Login" 
+			    HorizontalOptions="Fill" 
+			    FontSize="16" 
+			    TextColor="White" 
+			    BackgroundColor="Teal" 
+			    IsEnabled="false">
+				<View.HeightRequest>
+                    <OnPlatform x:TypeArguments="x:Double" Android="48" iOS="40"/>
+				</View.HeightRequest>
+			</Button>
+            <BoxView HeightRequest="24" />
+        </StackLayout>
+	</Frame>
+</ContentPage>
